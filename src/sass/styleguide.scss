@@ -216,7 +216,6 @@ $sg-border-radius-med : 6px;
     @media all and (min-width: $sg-bp-med) {
       border-bottom: 0;
       position: relative;
-
       > ol {
         position: absolute;
         top: $offset-top;
@@ -1429,6 +1428,7 @@ aside.sidebar {
         margin-bottom: 5px;
         padding: 0 35px;
         opacity: 0.5;
+        text-transform: uppercase;
       }
       & > ul {
         margin-bottom: 50px;
