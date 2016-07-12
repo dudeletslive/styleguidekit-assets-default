@@ -18,7 +18,7 @@
 {{# patternTypes }}
   <li class="sg-nav-{{ patternTypeLC }}"><span><a class="sg-acc-handle">{{ patternTypeUC }}</a></span><ul class="sg-acc-panel">
   {{# patternTypeItems }}
-    <li class="sg-nav-{{ patternSubtypeLC }}"><a class="sg-acc-handle" href="{{ patternSubtypeUC }}">{{ patternSubtypeUC }}</a></li>
+    <li class="sg-nav-{{ patternSubtypeLC }}"><a class="sg-acc-handle" href="?p=viewall-atoms-{{ patternSubtypeUC }}">{{ patternSubtypeUC }}</a></li>
   {{/ patternTypeItems }}
   {{# patternItems }}
     <li><a href="patterns/{{ patternPath }}" class="sg-pop {{# patternState }}sg-pattern-state {{ patternState }}{{/ patternState }}" data-patternpartial="{{ patternPartial }}">{{ patternName }}</a></li>

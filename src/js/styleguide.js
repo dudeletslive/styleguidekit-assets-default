@@ -36,24 +36,6 @@
   });
 
   // Accordion dropdown
-  $('.sg-acc-handle').on("click", function(e){
-    e.preventDefault();
-
-    var $this = $(this),
-      $panel = $this.next('.sg-acc-panel'),
-      subnav = $this.parent().parent().hasClass('sg-acc-panel');
-
-    //Close other panels if link isn't a subnavigation item
-    if (!subnav) {
-      $('.sg-acc-handle').not($this).removeClass('active');
-      $('.sg-acc-panel').not($panel).removeClass('active');
-    }
-
-    //Activate selected panel
-    $this.toggleClass('active');
-    $panel.toggleClass('active');
-    setAccordionHeight();
-  });
 
   //Accordion Height
   function setAccordionHeight() {
