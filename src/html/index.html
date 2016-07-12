@@ -2,7 +2,7 @@
 <html id="patternlab-html">
   <head id="patternlab-head">
     
-    <title id="title">Pattern Lab</title>
+    <title id="title">Return Path Design System</title>
     <meta charset="UTF-8">
     
     <!-- never cache patterns -->
@@ -22,27 +22,9 @@
   </head>
   <body id="patternlab-body">
     
-    <!--Style Guide Header-->
-    <header class="sg-header" role="banner">
-      <a href="#sg-nav-container" class="sg-nav-toggle">Menu</a>
-      <div class="sg-nav-container" id="sg-nav-container">
-        <ol class="sg-nav" id="pl-pattern-nav-target"><!-- pattern lab nav will be inserted here --></ol>
-        <div class="sg-controls" id="sg-controls"><!-- ish Controls will be inserted here --></div>
-      </div>
-    </header>
-    <!--End Style Guide Header-->
-    
-    <!-- iFrame -->
-    <div id="sg-vp-wrap">
-      <div id="sg-cover"></div>
-      <div id="sg-gen-container">
-        <iframe id="sg-viewport" name="sg-viewport" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
-        <div id="sg-rightpull-container">
-          <div id="sg-rightpull"></div>
-        </div>
-      </div>
-    </div>
-    <!--end iFrame-->
+    <aside class="sidebar">
+      <ul class="sg-nav" id="pl-pattern-nav-target"><!-- pattern lab nav will be inserted here --></ul>
+    </aside>
     
     <!-- modal window -->
     <div id="sg-modal-container" class="sg-modal anim-ready" style="bottom: -2000px">
