@@ -431,7 +431,7 @@
 
     // capture default data
     var origClientX = event.clientX;
-    var origViewportWidth = $sgViewport.width();
+    var origViewportWidth = $sgViewport.width() - 245;
 
     fullMode = false;
 
@@ -496,10 +496,10 @@
   } else if ((oGetVars.w !== undefined) || (oGetVars.width !== undefined)) {
     vpWidth = (oGetVars.w !== undefined) ? oGetVars.w : oGetVars.width;
     vpWidth = (vpWidth.indexOf("em") !== -1) ? Math.floor(Math.floor(vpWidth.replace("em",""))*$bodySize) : Math.floor(vpWidth.replace("px",""));
-    DataSaver.updateValue("vpWidth",vpWidth);
-    updateViewportWidth(vpWidth);
+    DataSaver.updateValue("vpWidth",vpWidth - 245);
+    updateViewportWidth(vpWidth - 245);
   } else if (trackViewportWidth && (vpWidth = DataSaver.findValue("vpWidth"))) {
-    updateViewportWidth(vpWidth);
+    updateViewportWidth(vpWidth - 245);
   }
 
   // set up the defaults for the
