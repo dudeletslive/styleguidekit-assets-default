@@ -589,7 +589,7 @@
   margin: 0;
   top: 0;
   bottom: 0;
-  left: 0;
+  left: 245px;
   right: 0;
   background-color: white;
   /**
@@ -1339,7 +1339,6 @@ aside.sidebar > ul > li > ul > li a:hover, aside.sidebar > ul > li > ul > li a.a
 
 main.content {
   padding-bottom: 200px;
-  padding-left: 245px;
 }
 @media screen and (max-width: 2560px) {
   main.content .container {

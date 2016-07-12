@@ -714,7 +714,7 @@ $sg-border-radius-med : 6px;
   margin: 0;
   top: 0;
   bottom: 0;
-  left: 0;
+  left: 245px;
   right: 0;
   background-color: white;
 
@@ -1466,7 +1466,7 @@ aside.sidebar {
 
 main.content {
   padding-bottom: 200px;
-  padding-left: 245px;
+  // padding-left: 245px;
   @media screen and (max-width: 2560px) {
     .container {
       max-width: 1100px;
