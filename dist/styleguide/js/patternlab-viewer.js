@@ -1624,7 +1624,7 @@ window.addEventListener("message", receiveIframeMessage, false);
     }
 
     $('#sg-gen-container').width(theSize+viewportResizeHandleWidth); //Resize viewport wrapper to desired size + size of drag resize handler
-    $sgViewport.width(theSize); //Resize viewport to desired size
+    // $sgViewport.width(theSize); //Resize viewport to desired size
 
     var targetOrigin = (window.location.protocol === "file:") ? "*" : window.location.protocol+"//"+window.location.host;
     var obj = JSON.stringify({ "event": "patternLab.resize", "resize": "true" });
@@ -1698,7 +1698,7 @@ window.addEventListener("message", receiveIframeMessage, false);
 
 
   // capture the viewport width that was loaded and modify it so it fits with the pull bar
-  var origViewportWidth = $("#sg-viewport").width();
+  var origViewportWidth = $("#sg-viewport").width() - 245;
   $("#sg-gen-container").width(origViewportWidth);
 
   var testWidth = screen.width;
@@ -1777,8 +1777,8 @@ window.addEventListener("message", receiveIframeMessage, false);
     var origOrientation = window.orientation;
     window.addEventListener("orientationchange", function() {
       if (window.orientation != origOrientation) {
-        $("#sg-gen-container").width($(window).width());
-        $("#sg-viewport").width($(window).width());
+        $("#sg-gen-container").width($(window).width() - 245);
+        // $("#sg-viewport").width($(window).width());
         updateSizeReading($(window).width());
         origOrientation = window.orientation;
       }
