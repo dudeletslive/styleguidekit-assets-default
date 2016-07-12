@@ -151,7 +151,6 @@
 @media all and (min-width: 42em) {
   .sg-nav > li {
     border-bottom: 0;
-    float: left;
     position: relative;
   }
   .sg-nav > li > ol {
