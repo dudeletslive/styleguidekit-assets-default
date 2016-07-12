@@ -160,54 +160,6 @@ $sg-border-radius-med : 6px;
 
 
 
-/*------------------------------------*\
-    #HEADER
-\*------------------------------------*/
-
-/**
- * Pattern Lab's header is fixed across the top of the viewport and
- * contains the primary pattern navigation, viewport resizing items,
- * and tools.
- */
-.sg-header {
-  background: $sg-black;
-  color: $sg-white;
-  font-family: $sg-font;
-  text-transform: uppercase;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 4;
-  width: 100%;
-
-    /**
-     * All lists appearing in the header
-     */
-  ul {
-    padding: 0;
-    margin: 0;
-        list-style: none;
-  }
-
-    /**
-     * All links appearing in the header
-     */
-  a {
-    font-size: $sg-font-size-sm;
-    color: $sg-gray;
-    text-decoration: none;
-    line-height: 1;
-    padding: 1em 0.7em;
-    transition: background $sg-animate-quick ease-out;
-    transition: color $sg-animate-quick ease-out;
-
-    &:hover, &:focus, &.active {
-      color: $sg-white;
-      background: $sg-gray-dark;
-    }
-  }
-}
-
 
 
 /*------------------------------------*\
@@ -317,14 +269,12 @@ $sg-border-radius-med : 6px;
 
   &:hover, &:focus {
     &:after {
-      color: $sg-gray;
+      color: white;
     }
   }
 
   &.active {
     color: $sg-white;
-    background: $sg-gray-dark;
-
     &:after {
       top: -2px;
       color: $sg-gray;
@@ -339,29 +289,11 @@ $sg-border-radius-med : 6px;
  * Accordion panel
  */
 .sg-acc-panel {
-  overflow: hidden;
-  max-height: 0;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  min-width: 10em;
-  transition: max-height $sg-animate-quick ease-out;
 
     /**
      * List items appearing in each accordion panel
      */
   li {
-    background: $sg-gray-dark;
-
-        &:last-child {
-        border-bottom-left-radius: $sg-border-radius-med;
-        border-bottom-right-radius: $sg-border-radius-med;
-
-        a {
-          border-bottom-left-radius: $sg-border-radius-med;
-          border-bottom-right-radius: $sg-border-radius-med;
-        }
-      }
   }
 
     /**
@@ -374,10 +306,6 @@ $sg-border-radius-med : 6px;
     /**
      * Active is when accordion panel is open
      */
-  &.active {
-    max-height: 120em;
-    overflow: auto;
-  }
 
     /**
      * Right align accordion dropdown
@@ -387,20 +315,6 @@ $sg-border-radius-med : 6px;
     left: auto;
     right: 0;
   }
-}
-
-/**
- * Sub-navigation
- * 1) Third-level links are stylistically different
- * than first and second nav links.
- */
-.sg-sub-nav {
-    list-style: none;
-
-    a {
-        text-transform: none;
-        padding-left: 1rem;
-    }
 }
 
 
