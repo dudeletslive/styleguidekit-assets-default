@@ -2,7 +2,7 @@
 <html id="patternlab-html">
   <head id="patternlab-head">
     
-    <title id="title">Pattern Lab</title>
+    <title id="title">Return Path Design System</title>
     <meta charset="UTF-8">
     
     <!-- never cache patterns -->
@@ -22,27 +22,9 @@
   </head>
   <body id="patternlab-body">
     
-    <!--Style Guide Header-->
-    <header class="sg-header" role="banner">
-      <a href="#sg-nav-container" class="sg-nav-toggle">Menu</a>
-      <div class="sg-nav-container" id="sg-nav-container">
-        <ol class="sg-nav" id="pl-pattern-nav-target"><!-- pattern lab nav will be inserted here --></ol>
-        <div class="sg-controls" id="sg-controls"><!-- ish Controls will be inserted here --></div>
-      </div>
-    </header>
-    <!--End Style Guide Header-->
-    
-    <!-- iFrame -->
-    <div id="sg-vp-wrap">
-      <div id="sg-cover"></div>
-      <div id="sg-gen-container">
-        <iframe id="sg-viewport" name="sg-viewport" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
-        <div id="sg-rightpull-container">
-          <div id="sg-rightpull"></div>
-        </div>
-      </div>
-    </div>
-    <!--end iFrame-->
+    <aside class="sidebar">
+      <ul class="sg-nav" id="pl-pattern-nav-target"><!-- pattern lab nav will be inserted here --></ul>
+    </aside>
     
     <!-- modal window -->
     <div id="sg-modal-container" class="sg-modal anim-ready" style="bottom: -2000px">
@@ -62,19 +44,20 @@
     
     <!-- mustache templates -->
     <script type="text/mustache" id="pl-pattern-nav-template">
-      {{# patternTypes }}
-  <li class="sg-nav-{{ patternTypeLC }}"><a class="sg-acc-handle">{{ patternTypeUC }}</a><ol class="sg-acc-panel">
+      
+{{# patternTypes }}
+  <li class="sg-nav-{{ patternTypeLC }}"><a class="sg-acc-handle">{{ patternTypeUC }}</a><ul class="sg-acc-panel">
   {{# patternTypeItems }}
-    <li class="sg-nav-{{ patternSubtypeLC }}"><a class="sg-acc-handle">{{ patternSubtypeUC }}</a><ol class="sg-acc-panel sg-sub-nav">
+    <li class="sg-nav-{{ patternSubtypeLC }}"><a class="sg-acc-handle">{{ patternSubtypeUC }}</a><ul class="sg-acc-panel sg-sub-nav">
     {{# patternSubtypeItems }}
       <li><a href="patterns/{{ patternPath }}" class="sg-pop  {{# patternState }}sg-pattern-state {{ patternState }}{{/ patternState }}" data-patternpartial="{{ patternPartial }}">{{ patternName }}</a></li>
     {{/ patternSubtypeItems }}
-    </ol></li>
+    </ul></li>
   {{/ patternTypeItems }}
   {{# patternItems }}
     <li><a href="patterns/{{ patternPath }}" class="sg-pop {{# patternState }}sg-pattern-state {{ patternState }}{{/ patternState }}" data-patternpartial="{{ patternPartial }}">{{ patternName }}</a></li>
   {{/ patternItems }}
-  </ol></li>
+  </ul></li>
 {{/ patternTypes }}
 <li><a href="styleguide/html/styleguide.html" class="sg-pop" data-patternpartial="all">All</a></li>
 
@@ -246,7 +229,7 @@
     
     <!-- the tempalte for code-related tabs in the code view slider -->
     <script type="text/mustache" id="pl-panel-template-code">
-      <pre class="language-markup">
+      <pre class="language-markup code-block">
   <code id="sg-code-fill-{{ language }}" class="language-{{ language }}">{{{ code }}}</code>
 </pre>
 
