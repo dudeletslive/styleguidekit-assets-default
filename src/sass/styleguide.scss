@@ -692,13 +692,6 @@ $sg-border-radius-med : 6px;
   position: relative;
   text-align: center;
   margin: 0;
-  -webkit-overflow-scrolling: touch;
-  overflow-y: auto;
-  overflow-x: hidden;
-
-  &.hay-mode {
-      transition: all 40s linear;
-  }
 }
 
 /**
