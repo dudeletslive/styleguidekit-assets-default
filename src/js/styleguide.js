@@ -339,7 +339,7 @@
       $('#sg-gen-container,#sg-viewport').addClass("vp-animate");
     }
 
-    $('#sg-gen-container').width(theSize+viewportResizeHandleWidth); //Resize viewport wrapper to desired size + size of drag resize handler
+    $('#sg-gen-container').width(theSize - 245); //Resize viewport wrapper to desired size + size of drag resize handler
     // $sgViewport.width(theSize); //Resize viewport to desired size
 
     var targetOrigin = (window.location.protocol === "file:") ? "*" : window.location.protocol+"//"+window.location.host;
