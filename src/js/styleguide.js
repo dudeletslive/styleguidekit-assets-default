@@ -397,7 +397,7 @@
 
   //Update The viewport size
   function updateViewportWidth(size) {
-    $("#sg-viewport").width(size);
+    // $("#sg-viewport").width(size);
     $("#sg-gen-container").width(size*1 + 14);
 
     updateSizeReading(size);
@@ -425,7 +425,7 @@
     $("#sg-rightpull-container").width(0);
   } else {
     $("#sg-rightpull-container").width(0);
-    $("#sg-viewport").width(origViewportWidth - 245);
+    // $("#sg-viewport").width(origViewportWidth - 245);
   }
   updateSizeReading($("#sg-viewport").width());
 
@@ -494,7 +494,7 @@
     window.addEventListener("orientationchange", function() {
       if (window.orientation != origOrientation) {
         $("#sg-gen-container").width($(window).width());
-        $("#sg-viewport").width($(window).width());
+        // $("#sg-viewport").width($(window).width());
         updateSizeReading($(window).width());
         origOrientation = window.orientation;
       }
