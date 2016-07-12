@@ -423,42 +423,6 @@
 
   $('#sg-gen-container').on('touchstart', function(event){});
 
-  // handles widening the "viewport"
-  //   1. on "mousedown" store the click location
-  //   2. make a hidden div visible so that it can track mouse movements and make sure the pointer doesn't get lost in the iframe
-  //   3. on "mousemove" calculate the math, save the results to a cookie, and update the viewport
-  $('#sg-rightpull').mousedown(function(event) {
-
-    // capture default data
-    var origClientX = event.clientX;
-    var origViewportWidth = $sgViewport.width() - 245;
-
-    fullMode = false;
-
-    // show the cover
-    $("#sg-cover").css("display","block");
-
-    // add the mouse move event and capture data. also update the viewport width
-    $('#sg-cover').mousemove(function(event) {
-      var viewportWidth;
-
-      viewportWidth = origViewportWidth + 2*(event.clientX - origClientX);
-
-      if (viewportWidth > minViewportWidth) {
-
-        if (!DataSaver.findValue('vpWidth')) {
-          DataSaver.addValue("vpWidth",viewportWidth);
-        } else {
-          DataSaver.updateValue("vpWidth",viewportWidth);
-        }
-
-        sizeiframe(viewportWidth,false);
-      }
-    });
-
-    return false;
-
-  });
 
   // on "mouseup" we unbind the "mousemove" event and hide the cover again
   $('body').mouseup(function() {
@@ -478,7 +442,8 @@
   if (($(window).width() == testWidth) && ('ontouchstart' in document.documentElement) && ($(window).width() <= 1024)) {
     $("#sg-rightpull-container").width(0);
   } else {
-    $("#sg-viewport").width(origViewportWidth - 14);
+    $("#sg-rightpull-container").width(0);
+    $("#sg-viewport").width(origViewportWidth - 245);
   }
   updateSizeReading($("#sg-viewport").width());
 
