@@ -1709,9 +1709,9 @@ window.addEventListener("message", receiveIframeMessage, false);
     $("#sg-rightpull-container").width(0);
   } else {
     $("#sg-rightpull-container").width(0);
-    // $("#sg-viewport").width(origViewportWidth - 245);
+    // $("#sg-viewport").width(origViewportWidth - 245);j
   }
-  updateSizeReading($("#sg-viewport").width());
+  // updateSizeReading($("#sg-viewport").width());
 
   // get the request vars
   var oGetVars = urlHandler.getRequestVars();
@@ -1778,7 +1778,7 @@ window.addEventListener("message", receiveIframeMessage, false);
     window.addEventListener("orientationchange", function() {
       if (window.orientation != origOrientation) {
         $("#sg-gen-container").width($(window).width());
-        // $("#sg-viewport").width($(window).width());
+        $("#sg-viewport").width($(window).width());
         updateSizeReading($(window).width());
         origOrientation = window.orientation;
       }
